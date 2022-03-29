@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Evaluación intermedia módulo 2 Vero Isla</title>
+  </head>
+  <body>
+    <h1>Dados y apuestas</h1>
+    <h3>Introduce aquí tu jugada</h3>
+    <form>
+      <select class="js_select" name="" id="">
+        <option>Que número apuestas del 1 al 6</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+      <label for="money"></label>
+      <input
+        class="js_money"
+        type="text"
+        id="money"
+        name="money"
+        value=""
+        placeholder="¿Cúanto apuestas?"
+      />
+      <button type="button" class="js_btn">Jugar</button>
+    </form>
+    <h2 class="js_play">Vamos a jugar!</h2>
+
+    <h2 class="js_hidden js_double">Has ganado el doble de lo apostado 🥳</h2>
+    <h2 class="js_hidden js_lost">Has perdido lo apostado 🥴</h2>
+    <p>Saldo: <span class="js_yourMoney">50</span></p>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
