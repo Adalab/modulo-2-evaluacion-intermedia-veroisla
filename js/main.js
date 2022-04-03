@@ -51,7 +51,7 @@ function numberSelected(selectedNumber, numAleat) {
     moneyValue = moneyValue - moneyToPlay; // mi variable = 50 - el dinero apostado
   }
   yourMoney.innerHTML = `Saldo: ${moneyValue}`; //pinto en el html, con el valor de la variable moneyValue
-  numberComputer.innerHTML = `El ordenador ha sacado el número: ${numAleat}`; //Frase que me diga cúanto ha apostado el ordenador.
+  numberComputer.innerHTML = `Dado: ${numAleat}`; //Frase que me diga cúanto ha apostado el ordenador.
   stopGame(); // cada vez que apueste el usuario tengo que pasar esta función para ver si cumple la condición de 0 o 200
 }
 
