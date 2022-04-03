@@ -42,6 +42,14 @@ const numAleat = getRandomNumber(6);
     double.classList.add("js_hidden");
     lost.classList.remove("js_hidden"); 
 }
+
+/*Otra manera de hacerlo, habría que quitar los párrafos alternativos del html
+if ( numAleat === selectedNumber) {
+    double.innerHTML = "Has ganado el doble de lo apostado";
+}
+else {
+    double.innerHTML = "Has perdido lo apostado"
+}*/
 }
 
 
