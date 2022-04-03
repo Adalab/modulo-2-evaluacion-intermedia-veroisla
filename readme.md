@@ -36,4 +36,4 @@ aparecer el botón de jugar
 
 4️⃣ Cuando finaliza, muestra quien ha ganado la partida
 
-## [En este enlace puedes ver el resultado final de mi proyecto](https://github.com/Adalab/modulo-2-evaluacion-intermedia-veroisla.git) 😀 <br> <br>
+## [En este enlace puedes ver el resultado final de mi proyecto](http://beta.adalab.es/modulo-2-evaluacion-intermedia-veroisla/) 😀 <br> <br>
