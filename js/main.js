@@ -1,57 +1,35 @@
-"use strict";
+'use strict';
 
-// 1. Traer constantes
+// 1.ELEMENTOS DE HTML
 
-const number = document.querySelector(".js_select");
-const money = document.querySelector(".js_money");
-const button = document.querySelector(".js_btn");
-const yourMoney = document.querySelector(".js_yourMoney");
-//Frases
-const play = document.querySelector(".js_play");
-const double = document.querySelector(".js_double");
-const lost = document.querySelector(".js_lost");
+const number = document.querySelector('.js_select');
+const money = document.querySelector('.js_money');
+const yourMoney = document.querySelector('.js_yourMoney');
+const letsPlay = document.querySelector('.js_play');
 
+//BOTÓN PLAY Y RESET
+const buttonPlay = document.querySelector('.js_btn');
+const resetButton = document.querySelector('.js_reset');
 
 //DECLARACIÓN FUNCIONES
 
+//1. FUNCIÓN NÚMERO ALEATORIO
 
-//1. Número aleatorio
+function getRandomNumber(max) {
+  return Math.ceil(Math.random() * max);
+}
 
-function getRandomNumber(max) { 
-    return Math.ceil(Math.random() * max); 
-  } 
-
-
-// 2. Número seleccionado, actualziación frase
+// 2. FUNCIÓN NÚMERO SELECCIONADO / ACTUALIZACIÓN FRASES
 
 function numberSelected() {
-
-const selectedNumber = parseInt(number.value);
-const numAleat = getRandomNumber(6);
-
-    if ( numAleat === selectedNumber ) {
-
-        play.classList.add("js_hidden");
-        lost.classList.add("js_hidden");
-        double.classList.remove("js_hidden");
-    }
-
-    else {
-        
-    play.classList.add("js_hidden");
-    double.classList.add("js_hidden");
-    lost.classList.remove("js_hidden"); 
+  const selectedNumber = parseInt(number.value);
+  const numAleat = getRandomNumber(6);
+  if (numAleat === selectedNumber) {
+    letsPlay.innerHTML = 'Has ganado el doble de lo apostado 💃';
+  } else {
+    letsPlay.innerHTML = 'Has perdido lo apostado 🥴';
+  }
 }
-
-/*Otra manera de hacerlo, habría que quitar los párrafos alternativos del html
-if ( numAleat === selectedNumber) {
-    double.innerHTML = "Has ganado el doble de lo apostado";
-}
-else {
-    double.innerHTML = "Has perdido lo apostado"
-}*/
-}
-
 
 //   //FUNCIÓN BONUS, ACTUALIZACIÓN DINERO (no me sale...., error NAN en moneyUpdate)
 
@@ -64,7 +42,6 @@ else {
 
 //      const selectedNumber = parseInt(number.value);
 //      const numAleat = getRandomNumber(6);
-
 
 //      if ( numAleat === selectedNumber) {
 
@@ -79,21 +56,22 @@ else {
 
 //   }
 
-
-
 //FUNCIÓN MANEJADORA
 
 function handlePlay(event) {
+  event.preventDefault();
+  numberSelected();
 
-    event.preventDefault();
-
-    numberSelected(); 
-
-    //  moneyUpdate ();
+  //  moneyUpdate ();
 }
 
+//FUNCIÓN RESET
+function handleReset() {
+  number.value = 'Que número apuestas del 1 al 6';
+  letsPlay.innerHTML = 'Vamos a jugar!';
+}
 
+//EVENTO
 
-//EVENTO 
-
-  button.addEventListener('click', handlePlay)
+buttonPlay.addEventListener('click', handlePlay);
+resetButton.addEventListener('click', handleReset);

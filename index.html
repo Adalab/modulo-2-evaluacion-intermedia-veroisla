@@ -13,7 +13,7 @@
       <h2>Introduce aquí tu jugada</h2>
       <form class="form">
         <select class="js_select" name="number" id="number">
-          <option disabled>Que número apuestas del 1 al 6</option>
+          <option selected disabled>Que número apuestas del 1 al 6</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -34,11 +34,9 @@
       </form>
 
       <h2 class="js_play">Vamos a jugar!</h2>
-      <h2 class="js_hidden js_double subtitle">
-        Has ganado el doble de lo apostado 💃
-      </h2>
-      <h2 class="js_hidden js_lost">Has perdido lo apostado 🥴</h2>
+
       <p class="p">Saldo: <span class="js_yourMoney">50</span></p>
+      <button class="js_reset" type="button">Borrar</button>
     </main>
     <script src="./js/main.js"></script>
   </body>
