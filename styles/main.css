@@ -2,10 +2,6 @@
   margin: 0;
 }
 
-.js_hidden {
-  display: none;
-}
-
 .main {
   width: 100vw;
   height: 100vh;
@@ -13,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #739f89;
+  background-color: #be569ff3;
 }
 
 .h1 {
@@ -34,4 +30,12 @@
   border-radius: 10px;
   padding: 10px;
   border-color: #739f89;
+}
+
+.hidden {
+  display: none;
+}
+
+.size {
+  font-size: 16px;
 }
